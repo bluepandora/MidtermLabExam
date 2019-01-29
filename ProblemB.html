@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ProblemB</title>
+</head>
+<body>
+	<button type="button" onclick="displayLists()">Click me to display lists of to do tasks</button>
+	<ul id="list">
+	</ul>
+
+	<script>
+		
+		var test = new XMLHttpRequest();
+
+					onreadyStateChange(){
+		if (this.readyState == 4 & this.status == 200)
+			this.response()
+
+	}
+
+	test.open ("GET", "https://jsonplaceholder.typicode.com/todos", true);
+	test.close ();
+
+	</script>
+
+</body>
+</html>

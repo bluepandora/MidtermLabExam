@@ -1,0 +1,39 @@
+#header{
+	color: white;
+	margin: 5% 0 0 45%;
+}
+
+body{
+	background: black;
+}
+
+button.bt1{
+	width: 28%;
+}
+
+#container{
+	width: 35%;
+	height: 40%;
+	background-color: gray;
+	margin: 2% auto;
+	padding: 5px;
+	border: 1px solid white;
+	border-radius: 20px;
+	position: relative;
+}
+
+#calcu{
+	margin: 5% 0 0 15%;
+	font-style: bold;
+}
+
+#textfield{
+	background: green;
+	width: 82%;
+}
+
+button{
+	width: 20%;
+	height: 20%;
+	background: lightgray;
+}

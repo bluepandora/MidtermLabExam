@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<link rel="stylesheet" type="text/css" href="PC.css">
+</head>
+
+	<h3 id="header"> Basic Calculator </h3>
+<body>
+
+	<div id="container">
+		<div id="calcu">
+
+			<input type="number" placeholder="0" id="textfield"><p>
+
+			<button type="button" onclick="attachNumber(this)">1</button>
+			<button type="button" onclick="attachNumber(this)">2</button>
+			<button type="button" onclick="attachNumber(this)">3</button>
+			<button type="button" onclick="Add(this)">+</button><p>
+
+			<button type="button" onclick="attachNumber(this)">4</button>
+			<button type="button" onclick="attachNumber(this)">5</button>
+			<button type="button" onclick="attachNumber(this)">6</button>
+			<button type="button" onclick="Subtract(this)">-</button><p>
+
+			<button type="button" onclick="attachNumber(this)">7</button>
+			<button type="button" onclick="attachNumber(this)">8</button>
+			<button type="button" onclick="attachNumber(this)">9</button>
+			<button type="button" onclick="Multiply(this)">*</button><p>
+
+			<button type="button" onclick="attachNumber(this)">0</button>
+			<button type="button" onclick="attachNumber(this)"><-</button>
+			<button type="button" onclick="attachNumber(this)">C</button>
+			<button type="button" onclick="Divide(this)">/</button><p>
+
+			<button type="button" class="bt1" onclick="Exponent(this)">x2</button>
+			<button type="button" class="bt1" onclick="Modulo(this)">%</button>
+			<button type="button" class="bt1" onclick="Equals(this)">=</button>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		let n = document.getElementById('textfield');
+		let numberHolder = parseInt(n.value);
+		let optr;
+		
+		function attachNumber(){
+			n.value = innerHTML;
+		}
+
+		function Add(){
+			optr = "+";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function Subtract(){
+			optr = "-";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function Multiply(){
+			optr = "*";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function Divide(){
+			optr = "/";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function Modulo(){
+			optr = "%";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function Exponent(){
+			optr = "";
+			numberHolder = parseInt(n.value);
+			n.value = "n*n";
+		}
+
+		function Equals(){
+
+			switch(optr){
+				case "+"; 
+				n.value = numberHolder + parseInt(n.value);
+				break;
+
+				case "-"; 
+				n.value = numberHolder - parseInt(n.value);
+				break;
+
+				case "*"; 
+				n.value = numberHolder * parseInt(n.value);
+				break;
+
+				case "/"; 
+				n.value = numberHolder / parseInt(n.value);
+				break;
+
+				case "%"; 
+				n.value = numberHolder % parseInt(n.value);
+				break;
+
+				case "n*n"; 
+				n.value = numberHolder / parseInt(n.value);
+				break;
+			}
+			
+		}
+
+
+	</script>
+
+
+
+
+</body>
+</html>
